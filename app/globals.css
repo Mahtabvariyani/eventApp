@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -52,8 +49,6 @@
   }
 }
 
-
-
 * {
   list-style: none;
   padding: 0;
@@ -62,7 +57,7 @@
 }
 
 body {
-  font-family: var(--font-poppins)
+  font-family: var(--font-poppins);
 }
 
 .filter-grey {
@@ -72,6 +67,34 @@ body {
 
 /* ========================================== TAILWIND STYLES */
 @layer utilities {
+  .gridient {
+ 
+    
+    background: linear-gradient(270deg, #e6d7e5, #871b73, #871b5e, #e6d7e5);
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 35s ease infinite;
+    -moz-animation: AnimationName 35s ease infinite;
+    animation: AnimationName 35s ease infinite;
+
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
   .wrapper {
     @apply max-w-7xl lg:mx-auto p-5 md:px-10 xl:px-0 w-full bg-transparent;
   }
@@ -238,7 +261,7 @@ body {
 .cl-formButtonPrimary:hover,
 .cl-formButtonPrimary:focus,
 .cl-formButtonPrimary:active {
-  background-color: #df13dc
+  background-color: #df13dc;
 }
 
 /* ========================================== REACT-DATEPICKER STYLES */
@@ -262,4 +285,3 @@ body {
 .react-datepicker__time-list-item--selected {
   background-color: #624cf5 !important;
 }
-
