@@ -91,6 +91,7 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
           limit={3}
           page={searchParams.page as string}
           totalPages={relatedEvents?.totalPages}
+          
         />
     </section>
     </>
