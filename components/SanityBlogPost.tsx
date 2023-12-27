@@ -34,10 +34,11 @@ export default async function SanityBlogPost() {
 
     <div className="grid grid-cols-1 md:grid-cols-3 mt-5 gap-5">
       {data.map((post, index) => (
-        <Card key={index} className="min-h-[380px] bg-green-300 w-full max-w-[400px] rounded-lg">
+        <Card key={index} className="min-h-[380px] bg-gray-50  w-full max-w-[400px] rounded-lg">
           <CardHeader>
-            <CardTitle className="text-rose-700">{post.name}</CardTitle>
-            <CardDescription className="">{post.smallDescription}</CardDescription>
+            <CardTitle className="text-rose-700 line-clamp-1">{post.name}</CardTitle>
+           
+            <CardDescription className="line-clamp-3">{post.smallDescription}</CardDescription>
           </CardHeader>
           <CardContent>
             <Image
@@ -45,7 +46,7 @@ export default async function SanityBlogPost() {
               alt="img"
               width={200}
               height={200}
-              className="rounded-t-lg h-[200px] object-cover"
+              className="rounded-t-lg h-[200px] object-cover "
             />
           </CardContent>
           <CardFooter className="text-rose-700">
