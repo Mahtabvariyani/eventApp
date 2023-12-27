@@ -32,9 +32,9 @@ export default async function SanityBlogPost() {
   const data: blogSanity[] = await getData();
   return (
 
-    <div className="grid grid-cols-1  md:grid-cols-3 mt-5 gap-5">
+    <div className="grid grid-cols-1 md:grid-cols-3 mt-5 gap-5">
       {data.map((post, index) => (
-        <Card key={index} className="min-h-[380px] w-full max-w-[400px] rounded-lg">
+        <Card key={index} className="min-h-[380px] bg-green-300 w-full max-w-[400px] rounded-lg">
           <CardHeader>
             <CardTitle className="text-rose-700">{post.name}</CardTitle>
             <CardDescription className="">{post.smallDescription}</CardDescription>
