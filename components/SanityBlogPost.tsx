@@ -31,12 +31,13 @@ function urlFor(source: any) {
 export default async function SanityBlogPost() {
   const data: blogSanity[] = await getData();
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-4">
+
+    <div className="grid grid-cols-1  md:grid-cols-3 mt-5 gap-5">
       {data.map((post, index) => (
-        <Card key={index} className="mr-3 bg-transparent">
+        <Card key={index} className="min-h-[380px] w-full max-w-[400px] rounded-lg">
           <CardHeader>
             <CardTitle className="text-rose-700">{post.name}</CardTitle>
-            <CardDescription>{post.smallDescription}</CardDescription>
+            <CardDescription className="">{post.smallDescription}</CardDescription>
           </CardHeader>
           <CardContent>
             <Image
