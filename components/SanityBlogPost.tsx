@@ -24,7 +24,7 @@ async function getData() {
 
 const builder = imageUrlBuilder(client);
 
-function urlFor(source: any) {
+export function urlFor(source: any) {
   return builder.image(source);
 }
 

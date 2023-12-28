@@ -154,5 +154,10 @@ export interface blogSanity {
   image: any;
   currentSlug: string;
 }
-
+export interface fullBlog{
+  currentSlug:string;
+  name:string;
+  content:any;
+  image:any
+}
 
