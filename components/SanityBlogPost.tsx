@@ -27,6 +27,7 @@ const builder = imageUrlBuilder(client);
 export function urlFor(source: any) {
   return builder.image(source);
 }
+export const revalidate = 30; // revalidate at most 30 seconds
 
 export default async function SanityBlogPost() {
   const data: blogSanity[] = await getData();
